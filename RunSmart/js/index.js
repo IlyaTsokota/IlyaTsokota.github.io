@@ -115,7 +115,6 @@ $(document).ready(function () {
 		const name = e.target.querySelector('input[name=name]'),
 			phone = e.target.querySelector('input[name=phone]'),
 			email = e.target.querySelector('input[name=email]');
-		console.log(name.value);
 
 		if (name.value != "" && phone.value != "", email.value != "") {
 			$.ajax({
