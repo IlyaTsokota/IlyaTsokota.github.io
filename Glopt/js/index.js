@@ -172,10 +172,10 @@ function scrollFunction() {
 }
 
 function scrollToBlock() {
-	let linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+	let linkNav = document.querySelectorAll('.anchor'), //выбираем все ссылки к якорю на странице
 		speed = 0.3; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 	for (let i = 0; i < linkNav.length; i++) {
-		linkNav[i].addEventListener('click', (e) => { //по клику на ссылку
+		linkNav[i].addEventListener('click', (e) => {
 			e.preventDefault(); //отменяем стандартное поведение
 			let yOffset = window.pageYOffset, // производим прокрутка прокрутка
 				id = e.target.href.replace(/[^#]*(.*)/, '$1'), // к id элемента, к которому нужно перейти
@@ -197,4 +197,9 @@ function scrollToBlock() {
 		}, false);
 	}
 }
+document.querySelector('.up').addEventListener('click', (e) => {
+	e.preventDefault();
+	window.scrollTo(0, 0.2);
+});
+
 scrollToBlock();
