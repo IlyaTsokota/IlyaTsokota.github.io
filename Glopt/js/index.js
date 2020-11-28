@@ -176,25 +176,12 @@ function scrollToBlock() {
 		speed = 0.3; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 	for (let i = 0; i < linkNav.length; i++) {
 		linkNav[i].addEventListener('click', (e) => {
-			e.preventDefault(); //отменяем стандартное поведение
-			let yOffset = window.pageYOffset, // производим прокрутка прокрутка
-				id = e.target.href.replace(/[^#]*(.*)/, '$1'), // к id элемента, к которому нужно перейти
-				topOffset = document.querySelector(id).getBoundingClientRect().top, // отступ от окна браузера до id
-				start = null;
-			requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
-			function step(time) {
-				if (start === null) {
-					start = time;
-				}
-				let progress = time - start,
-					r = topOffset < 0 ? Math.max((yOffset - progress / speed), (yOffset + topOffset)) :
-					Math.min((yOffset + progress / speed), (yOffset + topOffset));
-				window.scrollTo(0, r);
-				if (r != yOffset + topOffset) {
-					requestAnimationFrame(step);
-				}
-			}
-		}, false);
+			e.preventDefault();
+			let yOffset = window.pageYOffset,
+				id = e.target.href.replace(/[^#]*(.*)/, '$1'),
+				topOffset = document.querySelector(id).getBoundingClientRect().top;
+			window.scrollTo(0, (yOffset + topOffset));//отменяем стандартное поведение
+		});
 	}
 }
 document.querySelector('.up').addEventListener('click', (e) => {
