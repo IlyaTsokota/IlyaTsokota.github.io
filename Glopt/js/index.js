@@ -172,8 +172,7 @@ function scrollFunction() {
 }
 
 function scrollToBlock() {
-	let linkNav = document.querySelectorAll('.anchor'), //выбираем все ссылки к якорю на странице
-		speed = 0.3; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+	let linkNav = document.querySelectorAll('.anchor'); // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 	for (let i = 0; i < linkNav.length; i++) {
 		linkNav[i].addEventListener('click', (e) => {
 			e.preventDefault();
