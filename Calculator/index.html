@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<meta name='description' content='Calculator'>
+	<meta name='author' content='Ilya'>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<main>
+		<div class="calculator">
+			<div class="container">
+				<div class="calculator__inner">
+					<div class="calculator__top">
+						<div class="calculator__top-burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<nav class="calculator__top-menu">
+							<ul class="calculator__top-list calculator__list">
+								<li class="calculator__list-item calculator__list-item--active">
+									<a href="#calculator" class="calculator__list-btn">Calculator</a>
+								</li>
+								<li class="calculator__list-item">
+									<a href="#converter" class="calculator__list-btn">Converter</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="calculator__top-theme">
+							<img src="icons/sun.png" alt="sun" />
+						</div>
+					</div>
+					<div class="calculator__body" id="calculator">
+						<div class="calculator__field">
+							<div class="calculator__field-history history">
+
+							</div>
+							<textarea rows="1" wrap="hard" class="calculator__current-calculation">
+							</textarea>
+							<div class="calculator__answer">
+								56788
+							</div>
+						</div>
+						<div class="calculator__operations">
+							<div class="calculator__operation calculator__operation--gray" id="clear">
+								AC
+							</div>
+							<div class="calculator__operation calculator__operation--gray" id="delete">
+								<img src="icons/delete.svg" alt="delete" />
+							</div>
+							<div class="calculator__operation calculator__operation--white" data-operation="%">
+								<img src="icons/percent.svg" alt="percent" />
+							</div>
+							<div class="calculator__operation calculator__operation--white" data-operation="/">
+								<img src="icons/division.svg" alt="division" />
+							</div>
+							<div class="calculator__operation">
+								7
+							</div>
+							<div class="calculator__operation">
+								8
+							</div>
+							<div class="calculator__operation">
+								9
+							</div>
+							<div class="calculator__operation calculator__operation--white" data-operation="*">
+								<img src="icons/multiply.svg" alt="multiply" />
+							</div>
+							<div class="calculator__operation">
+								4
+							</div>
+							<div class="calculator__operation">
+								5
+							</div>
+							<div class="calculator__operation">
+								6
+							</div>
+							<div class="calculator__operation calculator__operation--white " data-operation="-">
+								<img src="icons/minus.svg" alt="minus" />
+							</div>
+							<div class="calculator__operation">
+								1
+							</div>
+							<div class="calculator__operation">
+								2
+							</div>
+							<div class="calculator__operation">
+								3
+							</div>
+							<div class="calculator__operation  calculator__operation--white" data-operation="+">
+								<img src="icons/plus.svg" alt="plus" />
+							</div>
+							<div class="calculator__operation" id="plus-minus">
+								<img class="calculator__operation--disscus" src="icons/plus-minus.svg"
+									alt="plus-minus" />
+							</div>
+							<div class="calculator__operation">
+								0
+							</div>
+							<div class="calculator__operation">
+								.
+							</div>
+							<div class="calculator__operation calculator__operation--white" id="equal">
+								<img src="icons/equal.svg" alt="equal" />
+							</div>
+
+						</div>
+						<a href="#" class="cacluculator__hidden-menu">
+							<img src="icons/up.svg" alt="up arrow" />
+						</a>
+						<div class="calculator__menu-hidden hidden-menu ">
+							<a href="#" class="hidden-menu__close">
+								<img src="icons/up.svg" alt="close" />
+							</a>
+							<div class="hidden-menu__items">
+								<div class="hidden-menu__item">
+									(
+								</div>
+								<div class="hidden-menu__item">
+									)
+								</div>
+								<div class="hidden-menu__item" data-operation="mr">
+									MR
+								</div>
+								<div class="hidden-menu__item" data-operation='mc'>
+									MC
+								</div>
+								<div class="hidden-menu__item" data-operation='m+'>
+									M+
+								</div>
+								<div class="hidden-menu__item" data-operation="m-">
+									M-
+								</div>
+								<div class="hidden-menu__item">
+									sqrt
+								</div>
+								<div class="hidden-menu__item">
+									^
+								</div>
+								<div class="hidden-menu__item">
+									fac
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="calculator__body converter" id="converter">
+						<div class="converter__items">
+							<div class="converter__item">
+								Lenght
+							</div>
+							<div class="converter__item">
+								Weights
+							</div>
+							<div class="converter__item">
+								Area
+							</div>
+						</div>
+						<div class="converter__body converter__body--active" id="length">
+							<div class="converter__body-items">
+								<div class="converter__body-item">
+									<div class="converter__body-text">Cm</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+								<div class="converter__body-item">
+									<div class="converter__body-text">Km</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+								<div class="converter__body-item">
+									<div class="converter__body-text">M</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+							</div>
+						</div>
+						<div class="converter__body" id="weight">
+							<div class="converter__body-items">
+								<div class="converter__body-item">
+									<div class="converter__body-text">Grams</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+								<div class="converter__body-item">
+									<div class="converter__body-text">Kilograms</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+								<div class="converter__body-item">
+									<div class="converter__body-text">Tonnes</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+							</div>
+						</div>
+						<div class="converter__body" id="area">
+							<div class="converter__body-items">
+								<div class="converter__body-item">
+									<div class="converter__body-text">Square centimeters</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+								<div class="converter__body-item">
+									<div class="converter__body-text">Square kilometers</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+								<div class="converter__body-item">
+									<div class="converter__body-text">Square meters</div>
+									<input type="number" value="0" class="converter__body-input">
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+	<script src="js/mathcalc.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
